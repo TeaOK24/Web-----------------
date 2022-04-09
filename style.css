@@ -8,8 +8,6 @@
 
 .contaner{
     width: 100%;
-    height: 1800px;
-    background-color:rgba(39, 128, 39, 0.322);
 }
 
 .head{
@@ -32,21 +30,54 @@
     position: relative;
     background-color: #ede4d9;
     width: 15%;
-    min-width: 200px;
-    height: 600px;
+    min-width: 300px;
+    max-width: 400px;
     float: left;
     margin-left: 25px;
+    padding-bottom: 25px;
 }
 
-.stripefirst{
+.stripeall{
+    width: 100%;
+}
 
+.stripe1{
+    float: left;
+background-color: black;
+width: 100%;
+height: 10px;
 }
 
 .stripe{
+    margin-top: 5px;
+    float: left;
 background-color: black;
 width: 100%;
-height: 5px;
+height: 10px;
 }
+
+.menu a{
+    color: black;
+    text-decoration: none;
+    padding-top: 5px;
+    display: inline-block;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    font-family: 'Verdana';
+    transition: .3s ease-in-out;
+}
+
+.menu a:link{
+    color: black;
+}
+
+.menu a:hover{
+    font-weight: bold;
+    color: #F54318;
+    border-bottom: 2px solid #F54318;
+    box-shadow: 0 1px 0 white, 0 2px 0 #969696;
+}
+
 
 .menu ul{
     list-style-type: none;
@@ -57,7 +88,78 @@ height: 5px;
 
 .menu ol{
     list-style-type: none;
-    margin-top: 25px;
+    margin-top: 40px;
+}
+
+.menu li{
+    margin-top: 5px;
+}
+
+/*Слой невидим*/
+.overlay {
+    display: none;
+}
+
+/*Слой становится видимым*/
+.overlay:target {
+    display: block;
+    background-color: rgba(1, 0, 0, 0.77);
+    right: 0;
+    left: 0;
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    z-index: 11;
+}
+
+/*Характеристики самого окна, которое появляется после клика на кнопке*/
+.window {
+    display: none;
+    left: 50%;
+    z-index: 12;
+    margin: 0;
+    position: fixed;
+    padding: 15px;
+    border: 1px solid #383738;
+    background: #fefeff;
+    border-radius: 15px;
+    box-shadow: 0 13px 21px rgba(0,1,0,.19),0 21px 63px rgba(0,1,0,.31);
+}
+
+/*Появление модального окошка с верхнего края экрана*/
+.overlay:target+.window {
+    transform: translate(-50%, 0);
+    top: 17%;
+    display: block;
+}
+
+/*Внешний вид кнопки «Закрыть»*/
+.close {
+    top: -11px;
+    right: -11px;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    padding: 0;
+    border: 2px solid #ccd;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.81);
+    box-shadow: 0 0 12px #010;
+    text-align: center;
+    font: 18px sans-serif;
+}
+
+.close:before {
+    color: rgba(254, 254, 254, 0.89);
+    content: "X";
+    text-shadow: 0 1px 3px #010;
+    font-size: 14px;
+}
+
+/*Изменение характеристик при наведении на область */
+.close:hover {
+    background-color: rgba(253, 21, 0, 0.83);
+    transform: rotate(360deg);    
 }
 
 .content{
@@ -66,7 +168,6 @@ height: 5px;
     height: 100%;
     float: right;
     margin-right: 25px;
-    background-color: white;
 }
 
 .footer{
@@ -77,6 +178,7 @@ height: 5px;
     background-color: #ede4d9;
 }
 }
+
 
 
 
