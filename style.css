@@ -288,10 +288,6 @@
         opacity: .5;
     }
 
-    /*.textdown:hover + .American{
-        fill:#F54318;
-    }
-
     .textdown {
         margin: 0;
         padding: 0;
@@ -315,7 +311,11 @@
 
     .textdown a:hover {
         background-color: black;
-    }*/
+    }
+
+    .light{
+        background-color: rgb(7, 6, 6);
+    }
 
     .content {
         text-align: left;
