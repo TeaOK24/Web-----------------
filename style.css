@@ -114,19 +114,20 @@
 
     }
 
-    .tagline {
+    .slogan {
         font-family: 'Lobster';
         list-style-type: none;
         font-size: 50px;
         margin: 0 auto;
         transform: rotate(-8deg);
+        user-select: none;
     }
 
-    .quoteown {
+    .slogan_title_own{
         margin-left: -150px;
     }
 
-    .quotetwo {
+    .slogan_title_two {
         margin-left: 150px;
     }
 
@@ -148,18 +149,18 @@
         padding-bottom: 25px;
     }
 
-    .stripeall {
+    .line {
         width: 100%;
     }
 
-    .stripe1 {
+    .line_strip--first {
         float: left;
         background-color: black;
         width: 100%;
         height: 10px;
     }
 
-    .stripe {
+    .line_strip {
         margin-top: 5px;
         float: left;
         background-color: black;
@@ -283,7 +284,7 @@
         fill: #ede4d9;
     }
 
-    .part:hover {
+    .map_part:hover {
         transition: opacity .2s;
         opacity: .5;
     }

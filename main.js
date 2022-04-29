@@ -1,6 +1,6 @@
 /*США*/
 let elem1 = document.querySelector('.USA')
-let text1 = document.querySelector('.p1')
+let text1 = document.querySelector('.textdown_a1')
 
 
 
@@ -16,7 +16,7 @@ elem1.addEventListener('mouseleave', function () {
 
 /*Мексика*/
 let elem2 = document.querySelector('.Mexica')
-let text2 = document.querySelector('.p2')
+let text2 = document.querySelector('.textdown_a2')
 
 
 
@@ -31,7 +31,7 @@ elem2.addEventListener('mouseleave', function () {
 
 /*Европа*/
 let elem3 = document.querySelector('.Europa')
-let text3 = document.querySelector('.p3')
+let text3 = document.querySelector('.textdown_a3')
 
 
 
@@ -46,7 +46,7 @@ elem3.addEventListener('mouseleave', function () {
 
 /*Африка*/
 let elem4 = document.querySelector('.Africa')
-let text4 = document.querySelector('.p4')
+let text4 = document.querySelector('.textdown_a4')
 
 
 
@@ -61,7 +61,7 @@ elem4.addEventListener('mouseleave', function () {
 
 /*Россия*/
 let elem5 = document.querySelector('.Russia')
-let text5 = document.querySelector('.p5')
+let text5 = document.querySelector('.textdown_a5')
 
 
 
@@ -76,7 +76,7 @@ elem5.addEventListener('mouseleave', function () {
 
 /*Китай*/
 let elem6 = document.querySelector('.China')
-let text6 = document.querySelector('.p6')
+let text6 = document.querySelector('.textdown_a6')
 
 
 
@@ -91,7 +91,7 @@ elem6.addEventListener('mouseleave', function () {
 
 /*Корея*/
 let elem7 = document.querySelector('.Korea')
-let text7 = document.querySelector('.p7')
+let text7 = document.querySelector('.textdown_a7')
 
 
 
@@ -106,7 +106,7 @@ elem7.addEventListener('mouseleave', function () {
 
 /*Япония*/
 let elem8 = document.querySelector('.Japanese')
-let text8 = document.querySelector('.p8')
+let text8 = document.querySelector('.textdown_a8')
 
 
 
