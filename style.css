@@ -5,9 +5,9 @@
     padding: 0;
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:650px) {
     .body {
-        perspective: 1000px;
+        background: url(https://html5book.ru/wp-content/uploads/2021/04/background_54.png);
     }
 
     .preloader {
@@ -44,6 +44,23 @@
         background-color: #fff;
         animation: rightBlock 1s forwards;
         animation-delay: 1.7s;
+    }
+
+    /*Слой невидим*/
+    .preloader-overlay {
+        display: none;
+    }
+
+    /*Слой становится видимым*/
+    .preloader-overlay:target {
+        display: block;
+        background-color: rgba(1, 0, 0, 0.77);
+        right: 0;
+        left: 0;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 11;
     }
 
     @keyframes loading {
@@ -100,27 +117,51 @@
         width: 100%;
     }
 
-    .contaner_header {
-        width: 100%;
-        height: 250px;
-        background-color: #ede4d9;
-        display: flex;
-
-
-    }
-
     .contaner_header-logo {
         float: left;
+        width: 100%;
+        height: 100%;
 
     }
 
-    .contaner_slogan {
-        font-family: 'Lobster';
-        list-style-type: none;
-        font-size: 50px;
-        margin: 0 auto;
-        transform: rotate(-8deg);
-        user-select: none;
+    @media screen and (min-width:1240px) {
+
+
+        .contaner_slogan {
+            font-family: 'Lobster';
+            list-style-type: none;
+            font-size: 50px;
+            margin: 0 auto;
+            transform: rotate(-8deg);
+            user-select: none;
+        }
+
+        .contaner_header {
+            width: 100%;
+            height: 250px;
+            background-color: #ede4d9;
+            display: flex;
+        }
+    }
+
+    @media screen and (max-width:1239px) and (min-width:1100px) {
+
+
+        .contaner_slogan {
+            font-family: 'Lobster';
+            list-style-type: none;
+            font-size: 40px;
+            margin: 50px auto;
+            transform: rotate(-8deg);
+            user-select: none;
+        }
+
+        .contaner_header {
+            width: 100%;
+            height: 250px;
+            background-color: #ede4d9;
+            display: flex;
+        }
     }
 
     .contaner_slogan_text1 {
@@ -131,31 +172,144 @@
         margin-left: 150px;
     }
 
-    .main {
-        width: 100%;
-        padding-top: 25px;
+    @media screen and (max-width:1099px) and (min-width:815px) {
+
+
+        .contaner_slogan {
+
+            margin: 50px auto;
+            font-family: 'Lobster';
+            list-style-type: none;
+            font-size: 30px;
+            transform: rotate(-8deg);
+            user-select: none;
+        }
+
+        .contaner_header-logo {
+            float: left;
+            width: 90%;
+            height: 90%;
+
+
+        }
+
+        .contaner_slogan_text1 {
+            margin-left: -100px;
+        }
+
+        .contaner_slogan_text2 {
+            margin-left: 100px;
+        }
+
+        .contaner_header {
+            width: 100%;
+            height: 200px;
+            background-color: #ede4d9;
+            display: flex;
+        }
+
+
     }
 
-    .video {
+    @media screen and (max-width:814px) and (min-width:702px) {
+
+
+        .contaner_slogan {
+
+            margin: 50px auto;
+            font-family: 'Lobster';
+            list-style-type: none;
+            font-size: 25px;
+            transform: rotate(-8deg);
+            user-select: none;
+        }
+
+        .contaner_header-logo {
+            float: left;
+            width: 80%;
+            height: 80%;
+
+
+        }
+
+        .contaner_slogan_text1 {
+            margin-left: -80px;
+        }
+
+        .contaner_slogan_text2 {
+            margin-left: 80px;
+        }
+
+        .contaner_header {
+            width: 100%;
+            height: 200px;
+            background-color: #ede4d9;
+            display: flex;
+        }
+
+
+    }
+
+    @media screen and (max-width:702px) {
+
+
+        .contaner_slogan {
+
+            margin: 50px auto;
+            font-family: 'Lobster';
+            list-style-type: none;
+            font-size: 25px;
+            transform: rotate(-8deg);
+            user-select: none;
+        }
+
+        .contaner_header-logo {
+            float: left;
+            width: 80%;
+            height: 80%;
+
+
+        }
+
+        .contaner_slogan_text1 {
+            margin-left: -80px;
+        }
+
+        .contaner_slogan_text2 {
+            margin-left: 80px;
+        }
+
+        .contaner_header {
+            width: 100%;
+            height: 200px;
+            background-color: #ede4d9;
+            display: flex;
+        }
+
+    }
+
+    .contaner_video {
         width: 100%;
         height: 600px;
         overflow: hidden;
-        /*border: #010;    как сделать рамку внутри?  */ 
+        /*border: #010;    как сделать рамку внутри?  */
     }
+
+
 
     .menu {
         width: 100%;
         background: #ede4d9;
     }
 
-    .main_topmenu {
+    .menu_topmenu {
         text-align: left;
         display: inline;
         padding: 15px 4px 17px 0;
         list-style: none;
     }
 
-    .main_topmenu li {
+    .menu_topmenu li {
         font: bold 12px/18px sans-serif;
         display: inline-block;
         margin-right: -4px;
@@ -167,12 +321,12 @@
         box-shadow: 0px 0 2px rgba(0, 0, 0, 1);
     }
 
-    .main_topmenu li:hover {
+    .menu_topmenu li:hover {
         background: #555;
         color: #fff;
     }
 
-    .main_menu {
+    .menu_submenu {
         padding: 0;
         position: absolute;
         top: 48px;
@@ -185,7 +339,7 @@
         -webkit-transiton: opacity 0.2s;
     }
 
-    .main_menu li {
+    .menu_submenu li {
         background: #555;
         display: block;
         color: #fff;
@@ -193,15 +347,15 @@
         box-shadow: 0 0px 2px rgba(0, 0, 0, 1);
     }
 
-    .main_menu h3 {
+    .menu_submenu h3 {
         text-decoration: none;
     }
 
-    .main_menu ul li:hover {
+    .menu_submenu ul li:hover {
         background: #666;
     }
 
-    .main_topmenu li:hover .main_menu {
+    .menu_topmenu li:hover .menu_submenu {
         display: block;
         opacity: 1;
         visibility: visible;
@@ -209,226 +363,85 @@
 
 
 
-
-
-
-    /*Слой невидим*/
-    .preloader-overlay {
-        display: none;
-    }
-
-    /*Слой становится видимым*/
-    .preloader-overlay:target {
-        display: block;
-        background-color: rgba(1, 0, 0, 0.77);
-        right: 0;
-        left: 0;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        z-index: 11;
-    }
-
-    /*Характеристики самого окна, которое появляется после клика на кнопке*/
-    .window {
-        width: 50%;
-        height: 50%;
-        display: none;
-        left: 50%;
-        z-index: 12;
-        margin: 0;
-        position: fixed;
-        padding: 15px;
-        border: 1px solid #383738;
-        background: #fefeff;
-        border-radius: 15px;
-        box-shadow: 0 13px 21px rgba(0, 1, 0, .19), 0 21px 63px rgba(0, 1, 0, .31);
-    }
-
-    /*Появление модального окошка с верхнего края экрана*/
-    .preloader-overlay:target+.window {
-        transform: translate(-50%, 0);
-        top: 17%;
-        display: block;
-    }
-
-    /*Внешний вид кнопки «Закрыть»*/
-    .window-close {
-        top: -11px;
-        right: -11px;
-        width: 23px;
-        height: 23px;
-        position: absolute;
-        padding: 0;
-        border: 2px solid #ccd;
-        border-radius: 15px;
-        background-color: rgba(61, 61, 61, 0.81);
-        box-shadow: 0 0 12px #010;
-        text-align: center;
-        font: 18px sans-serif;
-    }
-
-    .window-close:before {
-        color: rgba(254, 254, 254, 0.89);
-        content: "X";
-        text-shadow: 0 1px 3px #010;
-        font-size: 14px;
-    }
-
-    /*Изменение характеристик при наведении на область */
-    .window-close:hover {
-        background-color: rgba(253, 21, 0, 0.83);
-        transform-origin: rotate(180deg);
-    }
-
-    .window_map svg {
-        top: 0;
-        left: 0;
-        height: 100%;
+    .main {
         width: 100%;
-        fill: #ede4d9;
+        padding-top: 25px;
     }
 
-    .window_map-part:hover {
-        transition: opacity .2s;
-        opacity: .5;
-    }
-
-    .window_map-text {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        border: 2px solid;
-        text-align: center;
-    }
-
-    .window_map-text li {
-        display: inline;
-    }
-
-    .window_map-text a {
-        color: #fff;
-        padding: 5px 5px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-        width: 100px;
-    }
-
-
-    .window_map-light {
-        background-color: rgb(7, 6, 6);
-    }
-
-    .content {
+    .main_content {
         width: 100%;
-        height: 100%;
+        background: url(https://html5book.ru/wp-content/uploads/2021/04/background_54.png);
     }
+
+    .content h1 {
+        margin-left: 50px;
+    }
+
+    .main_line {
+        width: 100%;
+    }
+
+    .main_first {
+        float: left;
+        background-color: black;
+        width: 100%;
+        height: 10px;
+    }
+
+    .main_strip {
+        margin-top: 5px;
+        float: left;
+        background-color: black;
+        width: 100%;
+        height: 10px;
+    }
+
+
 
     .footer {
         margin-top: 25px;
         width: 100%;
-        height: 100px;
-        float: left;
         background-color: #ede4d9;
+        display: inline-block;
     }
 
-    .footer img {
-        width: 25px;
-        height: 25px;
+    .contact {
+        display: inline-block;
+        margin-left: 50px;
+        max-width: 180px;
+        margin-bottom: 25px;
     }
 
-    .copyright {
-        float: left;
-        margin-top: 50px;
-        margin-left: 10%;
-    }
-
-    .photomail {
-        float: left;
-        margin-left: 20%;
-        margin-top: 45px;
-    }
-
-    .mail {
-        float: left;
-        margin-top: 50px;
-    }
-
-
-
-    /*Разделы*/
-
-    .sections {
-        margin-top: 50px;
-        width: 100%;
-    }
-
-    .sections_line {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .sections_line img {
-        height: 80%;
-        width: 60%;
-        margin-left: auto;
+    .contact ul {
         margin-top: 25px;
-        margin-right: auto;
     }
 
-    .sections_block {
-        display: flex;
-        flex-direction: column;
+    .contact li {
+        list-style: none;
     }
 
-    .sections_text {
-        text-align: center;
-        text-decoration: none;
-        color: #010;
+    .contact a {
+        display: inline-block;
+        height: 35px;
+        background-color: #33383b;
+        border-radius: 2px;
         font-size: 20px;
+        color: #ffffff;
+        text-align: center;
+        line-height: 35px;
+        margin-left: 3px;
+        transition: all .25s;
     }
 
-    .window_sections {
-        width: 50%;
-        display: none;
-        left: 50%;
-        z-index: 12;
-        margin: 0;
-        position: fixed;
-        padding: 15px;
-        border: 1px solid #383738;
-        background: #fefeff;
-        border-radius: 15px;
-        box-shadow: 0 13px 21px rgba(0, 1, 0, .19), 0 21px 63px rgba(0, 1, 0, .31);
+    .contact a:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
     }
 
-    /*Появление модального окошка с верхнего края экрана*/
-    .overlay:target+.window_sections {
-        transform: translate(-50%, 0);
-        top: 10%;
-        display: block;
+    .social {
+        margin-left: 5px;
+        margin-right: 5px;
     }
-
-    .window_sections ul {
-        float: right;
-    }
-
-    .window_sections img {
-        float: left;
-    }
-
-    .window_sections h3 {
-        float: left;
-        margin: 25px;
-    }
-
-    .window_sections ol {
-        float: right;
-        margin: 25px;
-    }
-
 
 }
 
@@ -439,5 +452,5 @@
 
 
 
-/*@media screen and (max-width:599px) {
+/*@media screen and (max-width:649px) {
 }

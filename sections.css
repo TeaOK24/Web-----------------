@@ -1,0 +1,103 @@
+@media screen and (min-width:600px) {
+
+    /*Разделы*/
+
+    .sections {
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    .sections_line {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sections_line img {
+        height: 80%;
+        width: 60%;
+        margin-left: auto;
+        margin-top: 25px;
+        margin-right: auto;
+    }
+
+    .sections_block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sections_text {
+        text-align: center;
+        text-decoration: none;
+        color: #010;
+        font-size: 20px;
+    }
+
+    .window_sections {
+        width: 50%;
+        display: none;
+        left: 50%;
+        z-index: 12;
+        margin: 0;
+        position: fixed;
+        padding: 15px;
+        border: 1px solid #383738;
+        background: #fefeff;
+        border-radius: 15px;
+        box-shadow: 0 13px 21px rgba(0, 1, 0, .19), 0 21px 63px rgba(0, 1, 0, .31);
+    }
+
+    /*Появление модального окошка с верхнего края экрана*/
+    .overlay:target+.window_sections {
+        transform: translate(-50%, 0);
+        top: 10%;
+        display: block;
+    }
+
+    .window_sections ul {
+        float: right;
+    }
+
+    .window_sections img {
+        float: left;
+    }
+
+    .window_sections h3 {
+        float: left;
+        margin: 25px;
+    }
+
+    .window_sections ol {
+        float: right;
+        margin: 25px;
+    }
+
+    /*Внешний вид кнопки «Закрыть»*/
+    .window_close {
+        top: -11px;
+        right: -11px;
+        width: 23px;
+        height: 23px;
+        position: absolute;
+        padding: 0;
+        border: 2px solid #ccd;
+        border-radius: 15px;
+        background-color: rgba(61, 61, 61, 0.81);
+        box-shadow: 0 0 12px #010;
+        text-align: center;
+        font: 18px sans-serif;
+    }
+
+    .window_close:before {
+        color: rgba(254, 254, 254, 0.89);
+        content: "X";
+        text-shadow: 0 1px 3px #010;
+        font-size: 14px;
+    }
+
+    /*Изменение характеристик при наведении на область */
+    .window_close:hover {
+        background-color: rgba(253, 21, 0, 0.83);
+        transform-origin: rotate(180deg);
+    }
+}
