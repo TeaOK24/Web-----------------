@@ -57,7 +57,7 @@ elem4.addEventListener('mouseover', function () {
 
 elem4.addEventListener('mouseleave', function () {
     text4.classList.remove("window_map-light");
-})  
+})
 
 /*Россия*/
 let elem5 = document.querySelector('.window_map-Russia')
@@ -72,7 +72,7 @@ elem5.addEventListener('mouseover', function () {
 
 elem5.addEventListener('mouseleave', function () {
     text5.classList.remove("window_map-light");
-})  
+})
 
 /*Китай*/
 let elem6 = document.querySelector('.window_map-China')
@@ -87,7 +87,7 @@ elem6.addEventListener('mouseover', function () {
 
 elem6.addEventListener('mouseleave', function () {
     text6.classList.remove("window_map-light");
-})  
+})
 
 /*Корея*/
 let elem7 = document.querySelector('.window_map-Korea')
@@ -102,7 +102,7 @@ elem7.addEventListener('mouseover', function () {
 
 elem7.addEventListener('mouseleave', function () {
     text7.classList.remove("window_map-light");
-})  
+})
 
 /*Япония*/
 let elem8 = document.querySelector('.window_map-Japanese')
@@ -117,5 +117,65 @@ elem8.addEventListener('mouseover', function () {
 
 elem8.addEventListener('mouseleave', function () {
     text8.classList.remove("window_map-light");
-})  
+})
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    let toTopBtn = document.querySelector('.to-up');
+
+    window.onscroll = function () {
+        if (window.pageYOffset > 580) {
+            toTopBtn.style.display = 'block'
+        } else {
+            toTopBtn.style.display = 'none'
+        }
+    }
+
+    // плавный скролл наверх 
+    toTopBtn.addEventListener('click', function () {
+        window.scrollBy({
+            top: -document.documentElement.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+});
+
+/* Индекс слайда по умолчанию */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+/* Функция увеличивает индекс на 1, показывает следующй слайд*/
+function plusSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
+function minusSlide() {
+    showSlides(slideIndex -= 1);
+}
+
+/* Устанавливает текущий слайд */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+/* Основная функция слайдера */
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("item");
+    var dots = document.getElementsByClassName("slider-dots_item");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+};

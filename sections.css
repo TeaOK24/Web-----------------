@@ -19,11 +19,19 @@
         margin-left: auto;
         margin-top: 25px;
         margin-right: auto;
+        border: 10px double #010;
+        border-radius: 10px;
+        transition: 1s;
     }
 
     .sections_block {
         display: flex;
         flex-direction: column;
+    }
+
+
+    .sections_line img:hover {
+        transform: scale(1.2);
     }
 
     .sections_text {
@@ -34,7 +42,8 @@
     }
 
     .window_sections {
-        width: 50%;
+        width: 70%;
+        height: 80%;
         display: none;
         left: 50%;
         z-index: 12;
@@ -45,37 +54,66 @@
         background: #fefeff;
         border-radius: 15px;
         box-shadow: 0 13px 21px rgba(0, 1, 0, .19), 0 21px 63px rgba(0, 1, 0, .31);
+        overflow:scroll;
     }
 
     /*Появление модального окошка с верхнего края экрана*/
-    .overlay:target+.window_sections {
+    .preloader-overlay:target+.window_sections {
         transform: translate(-50%, 0);
-        top: 10%;
+        top: 5%;
         display: block;
     }
 
-    .window_sections ul {
-        float: right;
+    @media screen and (min-width:1500px) {
+
+        .window_sections ul {
+            float: left;
+            margin: 25px;
+        }
+
+        .window_sections h3 {
+            float: left;
+            margin: 25px;
+        }
+
+        .window_sections img {
+            float: left;
+            width: 60%;
+            height: 60%;
+        }
     }
 
-    .window_sections img {
-        float: left;
+    @media screen and (max-width:1499px) {
+
+        .window_sections ul {
+            float: left;
+            margin: 25px;
+        }
+
+        .window_sections h3 {
+            float: left;
+            margin: 25px;
+        }
+
+        .window_sections img {
+            margin-left: 15%;
+            margin-right: 15%;
+            float: left;
+            width: 70%;
+            height: 60%;
+        }
     }
 
-    .window_sections h3 {
-        float: left;
-        margin: 25px;
-    }
 
     .window_sections ol {
-        float: right;
+        float: left;
         margin: 25px;
     }
 
     /*Внешний вид кнопки «Закрыть»*/
     .window_close {
-        top: -11px;
-        right: -11px;
+        top: 5px;
+        right: 5px;
         width: 23px;
         height: 23px;
         position: absolute;
