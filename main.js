@@ -104,20 +104,7 @@ elem7.addEventListener('mouseleave', function () {
     text7.classList.remove("window_map-light");
 })
 
-/*Япония*/
-let elem8 = document.querySelector('.window_map-Japanese')
-let text8 = document.querySelector('.window_map-a8')
 
-
-
-
-elem8.addEventListener('mouseover', function () {
-    text8.classList.add("window_map-light");
-})
-
-elem8.addEventListener('mouseleave', function () {
-    text8.classList.remove("window_map-light");
-})
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -162,8 +149,7 @@ function currentSlide(n) {
 /* Основная функция слайдера */
 function showSlides(n) {
     var i;
-    var slides = document.getElementsByClassName("item");
-    var dots = document.getElementsByClassName("slider-dots_item");
+    var slides = document.getElementsByClassName("main_slider-item");
     if (n > slides.length) {
         slideIndex = 1
     }
@@ -173,9 +159,5 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
 };

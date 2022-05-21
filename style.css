@@ -5,9 +5,14 @@
     padding: 0;
 }
 
+.body {
+    background: url(https://html5book.ru/wp-content/uploads/2021/04/background_54.png);
+}
+
 @media screen and (min-width:650px) {
-    .body {
-        background: url(https://html5book.ru/wp-content/uploads/2021/04/background_54.png);
+
+    .contentphone {
+        display: none;
     }
 
     .preloader {
@@ -117,7 +122,7 @@
         width: 100%;
     }
 
-    .contaner_header-logo {
+    .header-logo {
         float: left;
         width: 100%;
         height: 100%;
@@ -127,16 +132,15 @@
     @media screen and (min-width:1240px) {
 
 
-        .contaner_slogan {
+        .header_slogan {
             font-family: 'Lobster';
-            list-style-type: none;
             font-size: 50px;
             margin: 0 auto;
             transform: rotate(-8deg);
             user-select: none;
         }
 
-        .contaner_header {
+        .header {
             width: 100%;
             height: 250px;
             background-color: #ede4d9;
@@ -147,16 +151,15 @@
     @media screen and (max-width:1239px) and (min-width:1100px) {
 
 
-        .contaner_slogan {
+        .header_slogan {
             font-family: 'Lobster';
-            list-style-type: none;
             font-size: 40px;
             margin: 50px auto;
             transform: rotate(-8deg);
             user-select: none;
         }
 
-        .contaner_header {
+        .header {
             width: 100%;
             height: 250px;
             background-color: #ede4d9;
@@ -164,44 +167,41 @@
         }
     }
 
-    .contaner_slogan_text1 {
+    .header_slogan_text1 {
         margin-left: -150px;
     }
 
-    .contaner_slogan_text2 {
+    .header_slogan_text2 {
         margin-left: 150px;
     }
 
     @media screen and (max-width:1099px) and (min-width:815px) {
 
 
-        .contaner_slogan {
+        .header_slogan {
 
             margin: 50px auto;
             font-family: 'Lobster';
-            list-style-type: none;
             font-size: 30px;
             transform: rotate(-8deg);
             user-select: none;
         }
 
-        .contaner_header-logo {
+        .header_header-logo {
             float: left;
             width: 90%;
             height: 90%;
-
-
         }
 
-        .contaner_slogan_text1 {
+        .header_slogan_text1 {
             margin-left: -100px;
         }
 
-        .contaner_slogan_text2 {
+        .header_slogan_text2 {
             margin-left: 100px;
         }
 
-        .contaner_header {
+        .header {
             width: 100%;
             height: 200px;
             background-color: #ede4d9;
@@ -214,17 +214,16 @@
     @media screen and (max-width:814px) and (min-width:702px) {
 
 
-        .contaner_slogan {
+        .header_slogan {
 
             margin: 50px auto;
             font-family: 'Lobster';
-            list-style-type: none;
             font-size: 25px;
             transform: rotate(-8deg);
             user-select: none;
         }
 
-        .contaner_header-logo {
+        .header-logo {
             float: left;
             width: 80%;
             height: 80%;
@@ -232,15 +231,15 @@
 
         }
 
-        .contaner_slogan_text1 {
+        .header_slogan_text1 {
             margin-left: -80px;
         }
 
-        .contaner_slogan_text2 {
+        .header_slogan_text2 {
             margin-left: 80px;
         }
 
-        .contaner_header {
+        .header {
             width: 100%;
             height: 200px;
             background-color: #ede4d9;
@@ -253,17 +252,16 @@
     @media screen and (max-width:702px) {
 
 
-        .contaner_slogan {
+        .header_slogan {
 
             margin: 50px auto;
             font-family: 'Lobster';
-            list-style-type: none;
             font-size: 25px;
             transform: rotate(-8deg);
             user-select: none;
         }
 
-        .contaner_header-logo {
+        .header-logo {
             float: left;
             width: 80%;
             height: 80%;
@@ -271,15 +269,15 @@
 
         }
 
-        .contaner_slogan_text1 {
+        .header_slogan_text1 {
             margin-left: -80px;
         }
 
-        .contaner_slogan_text2 {
+        .header_slogan_text2 {
             margin-left: 80px;
         }
 
-        .contaner_header {
+        .header {
             width: 100%;
             height: 200px;
             background-color: #ede4d9;
@@ -292,7 +290,6 @@
         width: 100%;
         height: 600px;
         overflow: hidden;
-        /*border: #010;    как сделать рамку внутри?  */
     }
 
 
@@ -309,13 +306,13 @@
         list-style: none;
     }
 
-    .menu_topmenu a{
+    .menu_topmenu a {
         text-decoration: none;
         color: #000;
     }
 
     .menu_topmenu li {
-        font: bold 12px/18px sans-serif;
+        font: bold 12px sans-serif;
         display: inline-block;
         margin-right: -4px;
         position: relative;
@@ -337,11 +334,7 @@
         top: 48px;
         left: 0;
         width: 200px;
-        box-shadow: none;
         display: none;
-        opacity: 0;
-        visibility: hidden;
-        -webkit-transiton: opacity 0.2s;
     }
 
     .menu_submenu li {
@@ -362,8 +355,6 @@
 
     .menu_topmenu li:hover .menu_submenu {
         display: block;
-        opacity: 1;
-        visibility: visible;
     }
 
 
@@ -403,17 +394,21 @@
         background: url(https://html5book.ru/wp-content/uploads/2021/04/background_54.png);
     }
 
-    .main_content p{
+    .main_content p {
         margin-top: 25px;
-font-size: 30px;
+        font-size: 30px;
     }
 
     .main_posiz {
-        margin: auto;
         margin-top: 50px;
         width: 90%;
-        display: flex;
-        justify-content: space-between;
+        display: inline-block;
+        text-align: center;
+
+    }
+
+    .main_posiz div{
+        display: inline-block;
     }
 
     .main_posiz img {
@@ -444,10 +439,10 @@ font-size: 30px;
         height: 10px;
     }
 
-    /* Собственно сам слайдер */
-    .slider {
+    /* Слайдер */
+    .main_slider {
         margin: auto;
-        max-width: 90%;
+        width: 90%;
         position: relative;
         height: 800px;
         margin-bottom: 15px;
@@ -456,17 +451,15 @@ font-size: 30px;
     }
 
     /* Картинка мастабируется по отношению к родительскому элементу */
-    .slider .item img {
+    .main_slider .main_slider-item img {
         object-fit: cover;
         width: 100%;
         height: 800px;
-        border: none;
-        box-shadow: none;
     }
 
     /* Кнопки вперед и назад */
-    .slider .prev,
-    .slider .next {
+    .main_slider .prev,
+    .main_slider .next {
         cursor: pointer;
         position: absolute;
         top: 0;
@@ -481,113 +474,62 @@ font-size: 30px;
         border-radius: 0 3px 3px 0;
     }
 
-    .slider .next {
+    .main_slider .next {
         right: 0;
         border-radius: 3px 0 0 3px;
     }
 
     /* При наведении на кнопки добавляем фон кнопок */
-    .slider .prev:hover,
-    .slider .next:hover {
+    .main_slider .prev:hover,
+    .main_slider .next:hover {
         background-color: rgba(0, 0, 0, 0.8);
     }
 
-    /* Заголовок слайда */
-    .slideText {
-        position: absolute;
-        color: #fff;
-        font-size: 35px;
-        /* Выравнивание текста по горизонтали и по вертикали*/
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        /* Тень*/
-        text-shadow: 1px 1px 1px #000, 0 0 1em #000;
-    }
-
-    /* Кружочки */
-    .slider-dots {
-        text-align: center;
-    }
-
-    .slider-dots_item {
-        cursor: pointer;
-        height: 12px;
-        width: 12px;
-        margin: 0 2px;
-        background-color: #ddd;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .active,
-    .slider-dots_item:hover {
-        background-color: #aaa;
-    }
-
     /* Анимация слайдов */
-    .slider .item {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 1.5s;
+    .main_slider .main_slider-item{
         animation-name: fade;
         animation-duration: 1.5s;
+    }
+
+    .main_backround img {
+        display: none;
     }
 
     .footer {
         margin-top: 25px;
         width: 100%;
         background-color: #ede4d9;
-        display: inline-block;
     }
 
-    .contact {
+    .footer_contact {
         display: inline-block;
         margin-left: 50px;
-        max-width: 180px;
+        width: 180px;
         margin-bottom: 25px;
     }
 
-    .contact ul {
+    .footer_contact ul {
         margin-top: 25px;
     }
 
-    .contact li {
+    .footer_contact li {
         list-style: none;
     }
 
-    .contact a {
+    .footer_contact a {
         margin-bottom: 5px;
-        display: inline-block;
+        display:block;
         height: 35px;
         background-color: #33383b;
-        border-radius: 2px;
+        border-radius: 5px;
         font-size: 20px;
         color: #ffffff;
         text-align: center;
-        line-height: 35px;
         margin-left: 3px;
         transition: all .25s;
     }
 
-    .contact a:hover {
+    .footer_contact a:hover {
         transform: scale(1.1);
-        -webkit-transform: scale(1.1);
     }
-
-    .social {
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-}
-
-
-
-
-
-
-
-
-/*@media screen and (max-width:649px) {
 }
