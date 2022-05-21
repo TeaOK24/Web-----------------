@@ -68,8 +68,15 @@
     }
 
     .main_content h1{
-        margin-left: 25px;
+        text-align: center;
         margin-top: 10px;
+    }
+
+    .main p {
+        text-align: center;
+        margin-bottom: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     #menu {
