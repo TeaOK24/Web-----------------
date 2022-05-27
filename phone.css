@@ -23,6 +23,10 @@
     .menu {
         display: none;
     }
+    
+    .main_slider{
+        display:none;
+    }
 
     .header {
         width: 100%;
@@ -70,6 +74,18 @@
     .main_content h1{
         text-align: center;
         margin-top: 10px;
+    }
+
+    .main_backround {
+        padding: 0 auto;
+        min-width: 300px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 50%;
+        background-color: #ede4d9;
+        border: 5px solid black;
     }
 
     .main p {
